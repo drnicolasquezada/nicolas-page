@@ -240,7 +240,7 @@ function Landing() {
             <div className="absolute -bottom-6 -left-6 hidden sm:block bg-background rounded-2xl p-5 shadow-soft border border-border max-w-[220px]">
               <div className="flex items-center gap-2 text-gold mb-1">
                 <Sparkles size={14} />
-                <span className="text-[10px] uppercase tracking-[0.25em]">Black Clinic</span>
+                <span className="text-[10px] uppercase tracking-[0.25em]">STUDIO</span>
               </div>
               <p className="text-sm font-display leading-snug">
                 "Cada rostro merece una mirada única."
@@ -393,7 +393,7 @@ function Landing() {
               </h2>
             </div>
             <p className="text-muted-foreground max-w-sm">
-              Una mirada editorial al trabajo clínico del Dr. Nicolás y al ambiente de Black Clinic.
+              Una mirada editorial al trabajo clínico del Dr. Nicolás y al ambiente de STUDIO.
             </p>
           </div>
 
@@ -497,12 +497,12 @@ function Landing() {
             <div className="flex items-center gap-2">
               <MapPin size={14} /> Santiago, Chile
             </div>
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-background transition">
-              <Instagram size={14} /> @dr.nicolasquezada
+            <a href="https://instagram.com/drnicolas_quezada" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-background transition">
+              <Instagram size={14} /> @drnicolas_quezada
             </a>
           </div>
           <div className="text-sm">
-            <div className="text-[11px] uppercase tracking-[0.3em] text-gold mb-3">Black Clinic</div>
+            <div className="text-[11px] uppercase tracking-[0.3em] text-gold mb-3">STUDIO</div>
             <p className="text-background/60 leading-relaxed">
               Espacio clínico dedicado a la armonización facial, el rejuvenecimiento y la estética
               orofacial con estándares de excelencia.
