@@ -29,8 +29,12 @@ import p7 from "@/assets/photos/IMG_3519.webp.asset.json";
 import p8 from "@/assets/photos/IMG_3535.webp.asset.json";
 import p9 from "@/assets/photos/IMG_3558.webp.asset.json";
 import p10 from "@/assets/photos/IMG_3564.webp.asset.json";
+import p11 from "@/assets/photos/IMG_3392.webp.asset.json";
+import p12 from "@/assets/photos/IMG_3551.webp.asset.json";
+import p13 from "@/assets/photos/IMG_3558-2.webp.asset.json";
+import p14 from "@/assets/photos/IMG_3564-2.webp.asset.json";
 
-const PHOTOS = [p1, p2, p3, p4, p5, p6, p7, p8, p9, p10].map((p) => p.url);
+const PHOTOS = [p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11, p12, p13, p14].map((p) => p.url);
 
 const WHATSAPP_URL = "https://wa.me/56900000000?text=Hola%20Dr.%20Nicol%C3%A1s%2C%20quisiera%20agendar%20una%20evaluaci%C3%B3n.";
 const BOOK_URL = "#contacto";
@@ -399,14 +403,18 @@ function Landing() {
 
           {/* Editorial masonry */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 lg:gap-5">
-            <GalleryImg src={PHOTOS[4]} className="row-span-2 aspect-[3/5]" />
+            <GalleryImg src={PHOTOS[10]} className="row-span-2 aspect-[3/5]" />
             <GalleryImg src={PHOTOS[2]} className="aspect-[4/3]" />
-            <GalleryImg src={PHOTOS[5]} className="row-span-2 aspect-[3/5]" />
+            <GalleryImg src={PHOTOS[11]} className="row-span-2 aspect-[3/5]" />
             <GalleryImg src={PHOTOS[3]} className="aspect-[4/3]" />
             <GalleryImg src={PHOTOS[6]} className="aspect-square" />
-            <GalleryImg src={PHOTOS[8]} className="aspect-[4/3]" />
+            <GalleryImg src={PHOTOS[12]} className="aspect-[4/3]" />
             <GalleryImg src={PHOTOS[9]} className="row-span-2 aspect-[3/5]" />
             <GalleryImg src={PHOTOS[1]} className="aspect-[4/3]" />
+            <GalleryImg src={PHOTOS[4]} className="row-span-2 aspect-[3/5]" />
+            <GalleryImg src={PHOTOS[5]} className="aspect-[4/3]" />
+            <GalleryImg src={PHOTOS[13]} className="aspect-[4/3]" />
+            <GalleryImg src={PHOTOS[8]} className="aspect-square" />
             <GalleryImg src={PHOTOS[0]} className="aspect-square" />
             <GalleryImg src={PHOTOS[7]} className="aspect-[4/3]" />
           </div>
