@@ -403,14 +403,18 @@ function Landing() {
 
           {/* Editorial masonry */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 lg:gap-5">
-            <GalleryImg src={PHOTOS[4]} className="row-span-2 aspect-[3/5]" />
+            <GalleryImg src={PHOTOS[10]} className="row-span-2 aspect-[3/5]" />
             <GalleryImg src={PHOTOS[2]} className="aspect-[4/3]" />
-            <GalleryImg src={PHOTOS[5]} className="row-span-2 aspect-[3/5]" />
+            <GalleryImg src={PHOTOS[11]} className="row-span-2 aspect-[3/5]" />
             <GalleryImg src={PHOTOS[3]} className="aspect-[4/3]" />
             <GalleryImg src={PHOTOS[6]} className="aspect-square" />
-            <GalleryImg src={PHOTOS[8]} className="aspect-[4/3]" />
+            <GalleryImg src={PHOTOS[12]} className="aspect-[4/3]" />
             <GalleryImg src={PHOTOS[9]} className="row-span-2 aspect-[3/5]" />
             <GalleryImg src={PHOTOS[1]} className="aspect-[4/3]" />
+            <GalleryImg src={PHOTOS[4]} className="row-span-2 aspect-[3/5]" />
+            <GalleryImg src={PHOTOS[5]} className="aspect-[4/3]" />
+            <GalleryImg src={PHOTOS[13]} className="aspect-[4/3]" />
+            <GalleryImg src={PHOTOS[8]} className="aspect-square" />
             <GalleryImg src={PHOTOS[0]} className="aspect-square" />
             <GalleryImg src={PHOTOS[7]} className="aspect-[4/3]" />
           </div>
