@@ -407,7 +407,7 @@ function Landing() {
             <GalleryImg src={PHOTOS[8]} className="aspect-[4/3]" />
             <GalleryImg src={PHOTOS[9]} className="row-span-2 aspect-[3/5]" />
             <GalleryImg src={PHOTOS[1]} className="aspect-[4/3]" />
-            <GalleryImg src={PHOTOS[0]} className="aspect-square" />
+            <GalleryImg src={PHOTOS[0]} className="aspect-square object-[center_20%]" />
             <GalleryImg src={PHOTOS[7]} className="aspect-[4/3]" />
           </div>
         </div>
