@@ -458,9 +458,7 @@ function Landing() {
           </p>
           <div className="mt-10 flex flex-wrap justify-center gap-4">
             <a
-              href={WHATSAPP_URL}
-              target="_blank"
-              rel="noopener noreferrer"
+              href={BOOK_URL}
               className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-foreground text-background text-sm tracking-wide hover:bg-foreground/90 transition shadow-luxe"
             >
               Agenda tu evaluación
