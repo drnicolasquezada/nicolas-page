@@ -32,7 +32,7 @@ import p10 from "@/assets/photos/IMG_3564.webp.asset.json";
 
 const PHOTOS = [p1, p2, p3, p4, p5, p6, p7, p8, p9, p10].map((p) => p.url);
 
-const WHATSAPP_URL = "https://wa.me/56900000000?text=Hola%20Dr.%20Nicol%C3%A1s%2C%20quisiera%20agendar%20una%20evaluaci%C3%B3n.";
+const WHATSAPP_URL = "https://wa.me/56951739948?text=Hola%20Dr.%20Nicol%C3%A1s%2C%20quisiera%20agendar%20una%20evaluaci%C3%B3n.";
 const BOOK_URL = "#contacto";
 
 export const Route = createFileRoute("/")({
@@ -51,9 +51,9 @@ export const Route = createFileRoute("/")({
           "Armonización facial con precisión, naturalidad y elegancia. Agenda tu evaluación personalizada.",
       },
       { property: "og:image", content: PHOTOS[1] },
-      { property: "og:url", content: "/" },
+      { property: "og:url", content: "https://dr.armonizate.cl/" },
     ],
-    links: [{ rel: "canonical", href: "/" }],
+    links: [{ rel: "canonical", href: "https://dr.armonizate.cl/" }],
   }),
   component: Landing,
 });
