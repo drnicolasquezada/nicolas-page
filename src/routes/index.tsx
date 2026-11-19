@@ -33,7 +33,7 @@ import p10 from "@/assets/photos/IMG_3564.webp";
 const PHOTOS = [p1, p2, p3, p4, p5, p6, p7, p8, p9, p10];
 
 const WHATSAPP_URL = "https://wa.me/56951739948?text=Hola%20Dr.%20Nicol%C3%A1s%2C%20quisiera%20agendar%20una%20evaluaci%C3%B3n.";
-const BOOK_URL = "#contacto";
+const BOOK_URL = "https://armonizate.cl";
 
 export const Route = createFileRoute("/")({
   head: () => ({
