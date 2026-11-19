@@ -58,9 +58,56 @@ export const Route = createFileRoute("/")({
   component: Landing,
 });
 
+const MEDIA = {
+  drInstitucional: "/media/dr-nicolas-institucional.webp",
+  // Video de bienvenida: dejar en "" hasta subir public/media/bienvenida.mp4
+  bienvenida: "",
+  bienvenidaPoster: "/media/bienvenida.jpg",
+};
+
+type Caso = { title: string; tag: string; desc: string; video?: string; image?: string; poster?: string };
+
+const CASOS: Caso[] = [
+  {
+    title: "Botox Full Face",
+    tag: "Toxina botulínica",
+    desc: "Toxina botulínica en todo el rostro para una expresión descansada, sin perder movimiento.",
+    video: "/media/caso-botox-fullface.mp4",
+    poster: "/media/caso-botox-fullface.jpg",
+  },
+  {
+    title: "Perfiloplastia",
+    tag: "Rinomodelación + mentón",
+    desc: "Ácido hialurónico en nariz y mentón para equilibrar el perfil, sin cirugía.",
+    video: "/media/caso-rino.mp4",
+    poster: "/media/caso-rino.jpg",
+  },
+  {
+    title: "Ácido Hialurónico 5 ml",
+    tag: "Armonización integral",
+    desc: "Ácido hialurónico distribuido según el análisis facial para un rostro más fresco y armónico.",
+    image: "/media/caso-ah5ml-antes-despues.webp",
+  },
+  {
+    title: "Ácido Hialurónico 5 ml",
+    tag: "Armonización integral",
+    desc: "Proyección y soporte con resultados naturales: el rostro se ve descansado, nunca transformado.",
+    video: "/media/caso-ah5ml.mp4",
+    poster: "/media/caso-ah5ml.jpg",
+  },
+  {
+    title: "Botox Full Face",
+    tag: "Toxina botulínica",
+    desc: "Resultado suave y natural, planificado según la musculatura de cada paciente.",
+    video: "/media/caso-botox-fullface-2.mp4",
+    poster: "/media/caso-botox-fullface-2.jpg",
+  },
+];
+
 const NAV = [
   { label: "Doctor", href: "#doctor" },
   { label: "Tratamientos", href: "#tratamientos" },
+  { label: "Resultados", href: "#resultados" },
   { label: "Filosofía", href: "#filosofia" },
   { label: "Galería", href: "#galeria" },
   { label: "Contacto", href: "#contacto" },
@@ -251,12 +298,37 @@ function Landing() {
         </div>
       </section>
 
+      {/* BIENVENIDA */}
+      {MEDIA.bienvenida && (
+      <section id="bienvenida" className="py-24 lg:py-32 bg-foreground text-background">
+        <div className="mx-auto max-w-5xl px-6 lg:px-10 text-center">
+          <div className="flex items-center justify-center gap-3 mb-5">
+            <span className="gold-divider" />
+            <span className="text-[11px] uppercase tracking-[0.35em] text-background/60">Bienvenida</span>
+          </div>
+          <h2 className="font-display text-4xl lg:text-5xl leading-tight text-background">
+            Conóceme antes de tu evaluación.
+          </h2>
+          <div className="mt-12 rounded-[1.5rem] overflow-hidden shadow-luxe bg-black mx-auto w-fit max-w-full">
+            <video
+              src={MEDIA.bienvenida}
+              poster={MEDIA.bienvenidaPoster}
+              controls
+              playsInline
+              preload="none"
+              className="block max-h-[80vh] max-w-full mx-auto"
+            />
+          </div>
+        </div>
+      </section>
+      )}
+
       {/* DOCTOR */}
       <section id="doctor" className="py-24 lg:py-32 bg-secondary/40">
         <div className="mx-auto max-w-7xl px-6 lg:px-10 grid lg:grid-cols-12 gap-14 items-center">
           <div className="lg:col-span-5 order-2 lg:order-1">
             <div className="relative aspect-[3/4] rounded-[1.5rem] overflow-hidden shadow-luxe">
-              <img src={PHOTOS[0]} alt="Dr. Nicolás Quezada" className="w-full h-full object-cover" />
+              <img src={MEDIA.drInstitucional} alt="Dr. Nicolás Quezada Tapia" className="w-full h-full object-cover object-top" />
             </div>
           </div>
           <div className="lg:col-span-7 order-1 lg:order-2">
@@ -271,15 +343,21 @@ function Landing() {
               Cirujano-Dentista · Especialista en Armonización Orofacial
             </p>
             <p className="mt-6 text-muted-foreground leading-relaxed text-lg max-w-2xl">
-              Con una formación rigurosa entre Chile y Brasil, el Dr. Nicolás combina precisión
-              clínica con sensibilidad estética. Su filosofía: realzar la belleza natural de cada
-              paciente respetando su esencia, sus proporciones y su expresión.
+              Soy el Dr. Nicolás Quezada, cirujano dentista de la Pontificia Universidad Católica y
+              especialista en Armonización Orofacial formado en Brasil. Fui docente de anatomía de
+              cabeza y cuello, y ese conocimiento guía cada tratamiento que realizo.
+            </p>
+            <p className="mt-4 text-muted-foreground leading-relaxed text-lg max-w-2xl">
+              Trabajo el rostro como un conjunto, con técnicas mínimamente invasivas y un objetivo
+              claro: que tu rostro se vea descansado y natural, nunca transformado. Te explico con
+              honestidad qué te conviene y qué no.
             </p>
             <ul className="mt-10 space-y-5">
               {[
                 ["Cirujano-Dentista", "Pontificia Universidad Católica de Chile"],
                 ["Diplomado en Medicina Estética", "Academia de Medicina y Cirugía Estética de Chile"],
                 ["Armonización Orofacial", "UniCPO, São Paulo, Brasil"],
+                ["Docente de anatomía", "Anatomía de cabeza y cuello"],
                 ["Perfeccionamiento continuo", "Múltiples cursos avanzados en su especialidad"],
               ].map(([t, d]) => (
                 <li key={t} className="flex gap-4 pb-5 border-b border-border/70 last:border-0">
@@ -327,6 +405,52 @@ function Landing() {
                 </article>
               );
             })}
+          </div>
+        </div>
+      </section>
+
+      {/* RESULTADOS */}
+      <section id="resultados" className="py-24 lg:py-32 bg-secondary/40">
+        <div className="mx-auto max-w-7xl px-6 lg:px-10">
+          <div className="max-w-2xl mb-14">
+            <div className="flex items-center gap-3 mb-5">
+              <span className="gold-divider" />
+              <span className="text-[11px] uppercase tracking-[0.35em] text-muted-foreground">Casos clínicos</span>
+            </div>
+            <h2 className="font-display text-4xl lg:text-5xl leading-tight">
+              Resultados reales, naturales y armónicos.
+            </h2>
+            <p className="mt-5 text-muted-foreground text-lg">
+              Pacientes tratados por el Dr. Nicolás. Cada resultado depende de la evaluación y
+              anatomía de cada persona.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 gap-8">
+            {CASOS.map((c, i) => (
+              <article key={i} className="rounded-[1.5rem] overflow-hidden bg-background border border-border shadow-soft">
+                <div className="aspect-video bg-black">
+                  {c.video ? (
+                    <video
+                      src={c.video}
+                      poster={c.poster}
+                      autoPlay
+                      muted
+                      loop
+                      playsInline
+                      preload="metadata"
+                      className="w-full h-full object-contain"
+                    />
+                  ) : (
+                    <img src={c.image} alt={`${c.title} antes y después`} loading="lazy" className="w-full h-full object-contain" />
+                  )}
+                </div>
+                <div className="p-7">
+                  <span className="text-[10px] uppercase tracking-[0.3em] text-gold">{c.tag}</span>
+                  <h3 className="font-display text-2xl mt-2 mb-2">{c.title}</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{c.desc}</p>
+                </div>
+              </article>
+            ))}
           </div>
         </div>
       </section>
