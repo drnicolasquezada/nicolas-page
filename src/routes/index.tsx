@@ -19,18 +19,18 @@ import {
   Stethoscope,
 } from "lucide-react";
 
-import p1 from "@/assets/photos/IMG_3364.webp.asset.json";
-import p2 from "@/assets/photos/IMG_3398.webp.asset.json";
-import p3 from "@/assets/photos/IMG_3451.webp.asset.json";
-import p4 from "@/assets/photos/IMG_3475.webp.asset.json";
-import p5 from "@/assets/photos/IMG_3493.webp.asset.json";
-import p6 from "@/assets/photos/IMG_3499.webp.asset.json";
-import p7 from "@/assets/photos/IMG_3519.webp.asset.json";
-import p8 from "@/assets/photos/IMG_3535.webp.asset.json";
-import p9 from "@/assets/photos/IMG_3558.webp.asset.json";
-import p10 from "@/assets/photos/IMG_3564.webp.asset.json";
+import p1 from "@/assets/photos/IMG_3364.webp";
+import p2 from "@/assets/photos/IMG_3398.webp";
+import p3 from "@/assets/photos/IMG_3451.webp";
+import p4 from "@/assets/photos/IMG_3475.webp";
+import p5 from "@/assets/photos/IMG_3493.webp";
+import p6 from "@/assets/photos/IMG_3499.webp";
+import p7 from "@/assets/photos/IMG_3519.webp";
+import p8 from "@/assets/photos/IMG_3535.webp";
+import p9 from "@/assets/photos/IMG_3558.webp";
+import p10 from "@/assets/photos/IMG_3564.webp";
 
-const PHOTOS = [p1, p2, p3, p4, p5, p6, p7, p8, p9, p10].map((p) => p.url);
+const PHOTOS = [p1, p2, p3, p4, p5, p6, p7, p8, p9, p10];
 
 const WHATSAPP_URL = "https://wa.me/56951739948?text=Hola%20Dr.%20Nicol%C3%A1s%2C%20quisiera%20agendar%20una%20evaluaci%C3%B3n.";
 const BOOK_URL = "#contacto";
@@ -50,7 +50,7 @@ export const Route = createFileRoute("/")({
         content:
           "Armonización facial con precisión, naturalidad y elegancia. Agenda tu evaluación personalizada.",
       },
-      { property: "og:image", content: PHOTOS[1] },
+      { property: "og:image", content: `https://dr.armonizate.cl${PHOTOS[1]}` },
       { property: "og:url", content: "https://dr.armonizate.cl/" },
     ],
     links: [{ rel: "canonical", href: "https://dr.armonizate.cl/" }],
